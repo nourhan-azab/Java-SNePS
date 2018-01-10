@@ -91,7 +91,7 @@
 
       	        <batchtest fork="yes" todir="${this.report}">
       	            <fileset dir="src/tests">
-      	                <include name="${test.pattern}"/>
+      	                <include name="**/*Test.java"/>
       	                <exclude name="**/AllTests.class"/>
       	                <exclude name="**/*$*.class"/>
       	            </fileset>
