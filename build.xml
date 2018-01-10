@@ -69,12 +69,13 @@
       	</path>
 
  
-              	<target name="compile">
+          <target name="compile">
       	    <javac destdir="bin/">
       	        <src path="src/"/>
       	        <classpath refid="compile.path"/>
       	    </javac>
       	</target>
+              	
 
 
       	<target name="test" depends="compile">
@@ -85,8 +86,8 @@
       	    	 <classpath>
       	    	            <pathelement location="$lib/junit.jar"/>
       	    	            <pathelement location="$lib/hamcrest.jar"/>
-      	    	            <pathelement location="$src/tests/"/>
-      	    	            <pathelement location="$src/tests/"/>
+      	    	            <pathelement location="$src/"/>
+      	    	            <pathelement location="$bin/"/>
       	    	 </classpath>
 
       	    	<formatter type="brief" usefile="false" />
