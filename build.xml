@@ -70,10 +70,8 @@
 
  
           <target name="compile">
-      	    <javac destdir="bin/">
-      	        <src path="src/"/>
-      	        <classpath refid="compile.path"/>
-      	    </javac>
+            <mkdir dir="build/classes"/>
+            <javac srcdir="src" destdir="build/classes"/>
       	</target>
               	
 
@@ -84,10 +82,7 @@
       	        <classpath refid="unit.test.path"/>
       	    	
       	    	 <classpath>
-      	    	            <pathelement location="$lib/junit.jar"/>
-      	    	            <pathelement location="$lib/hamcrest.jar"/>
-      	    	            <pathelement location="$src/"/>
-      	    	            <pathelement location="$bin/"/>
+      	    	  	<pathelement location="build/classes/"/>
       	    	 </classpath>
 
       	    	<formatter type="brief" usefile="false" />
