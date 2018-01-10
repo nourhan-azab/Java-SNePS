@@ -90,7 +90,7 @@
               	        <formatter type="xml"/>
 
               	        <batchtest fork="yes" todir="${this.report}">
-              	            <fileset dir="test">
+              	            <fileset dir="src/tests">
               	                <include name="${test.pattern}"/>
               	                <exclude name="**/AllTests.class"/>
               	                <exclude name="**/*$*.class"/>
