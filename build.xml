@@ -83,7 +83,7 @@
               	</target>
 
               	<target name="test" depends="compileUnitTests">
-              	    <junit printsummary="yes" haltonfailure="no">
+              	    <junit printsummary="yes" haltonfailure="yes">
               	    <jvmarg value="-Dfile.encoding=UTF-8"/>
               	        <classpath refid="unit.test.path"/>
 
