@@ -66,6 +66,9 @@
               	              	</target>
 
               	              	<target name="compileUnitTests" depends="compile">
+              	              	   <junit>
+              	              	        <classpath refid="Java-SNePS.classpath"/>
+              	              	   </junit>
               	              	    <javac srcdir="src/tests/" destdir="bin">
               	              	        <classpath refid="unit.test.path"/>
               	              	    </javac>
