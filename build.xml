@@ -82,7 +82,7 @@
               	    </javac>
               	</target>
 
-              	<target name="runUnitTests" depends="compileUnitTests">
+              	<target name="test" depends="compileUnitTests">
               	    <junit printsummary="yes" haltonfailure="no">
               	    <jvmarg value="-Dfile.encoding=UTF-8"/>
               	        <classpath refid="unit.test.path"/>
