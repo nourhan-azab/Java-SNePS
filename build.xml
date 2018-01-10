@@ -34,11 +34,12 @@
           	          <pathelement location="${test.build.dir}"/>
           	        </classpath>
           	        <formatter type="brief" usefile="false" />
-          	        <batchtest>
+          	        <batchtest fork="yes" todir="${this.report}">
           	            <fileset dir="${test.src.dir}" includes="**/*Test.java" />
           	        </batchtest>
           	    </junit>
           	  </target>
+          
 
 
               	
