@@ -52,32 +52,41 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-              	<path id="classpath.base">
+              
+              	<path id="src.path">    
+              	    <pathelement path="src/"/>
+              	 </path>
+              	
+              	<path id="compile.path">
+              	    <path refid="src.path"/>
+              	    <fileset dir="lib/">
+              	        <include name="**/*.jar"/>
+              	    </fileset>
               	</path>
 
-              	<path id="classpath.test">
-              	  <pathelement location="/lib/junit.jar"/>
-              	  <pathelement location="${basedir}" /> 
-              	  <path refid="classpath.base" />
+              	<path id="unit.test.path">
+              	    <path refid="compile.path"/>
+              	    <pathelement path="src/tests/"/>
               	</path>
 
+ 
               	<target name="compile">
-              	  <javac srcdir="${basedir}">
-              	    <classpath refid="classpath.test"/>
-              	  </javac>
+              	    <javac destdir="bin">
+              	        <src path="src"/>
+              	        <classpath refid="compile.path"/>
+              	    </javac>
               	</target>
-              	
-
-              	
-
 
               	<target name="test-compile" depends="compile">
+              	    <javac srcdir="src/tests/" destdir="bin">
+              	        <classpath refid="unit.test.path"/>
+              	    </javac>
               	</target>
 
               	<target name="test" depends="test-compile">
               	    <junit printsummary="yes" haltonfailure="yes">
               	    <jvmarg value="-Dfile.encoding=UTF-8"/>
-              	    	<classpath refid="classpath.test" />
+              	        <classpath refid="unit.test.path"/>
 
               	    	<formatter type="brief" usefile="false" />
 
