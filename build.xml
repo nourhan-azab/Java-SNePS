@@ -87,9 +87,9 @@
               	    <jvmarg value="-Dfile.encoding=UTF-8"/>
               	        <classpath refid="unit.test.path"/>
 
-              	        <formatter type="xml"/>
+              	    	<formatter type="brief" usefile="false" />
 
-              	        <batchtest fork="yes" todir="${this.report}">
+              	        <batchtest fork="yes">
               	            <fileset dir="src/tests">
               	                <include name="**/*Test.java"/>
               	                <exclude name="**/AllTests.class"/>
