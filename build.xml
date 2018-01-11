@@ -4,11 +4,12 @@
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." name="Java-SNePS">
-              	  <property name="main.build.dir" value="bin/"/>
+              	  <property name="main.build.dir" value="build/"/>
               	  <property name="main.src.dir" value="src/"/>
-              	  <property name="test.build.dir" value="bin/"/>
+              	  <property name="test.build.dir" value="build/test"/>
               	  <property name="test.src.dir" value="src/tests"/>
 
+              	
               	  <path id="classpath.test">
               	    <pathelement location="lib/junit.jar"/>
               	    <pathelement location="lib/hamcrest.jar"/>
