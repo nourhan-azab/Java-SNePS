@@ -76,13 +76,13 @@
               	    </javac>
               	</target>
 
-              	<target name="compileUnitTests" depends="compile">
+              	<target name="test-compile" depends="compile">
               	    <javac srcdir="src/tests/" destdir="bin">
               	        <classpath refid="unit.test.path"/>
               	    </javac>
               	</target>
 
-              	<target name="test" depends="compileUnitTests">
+              	<target name="test" depends="test-compile">
               	    <junit printsummary="yes" haltonfailure="yes">
               	    <jvmarg value="-Dfile.encoding=UTF-8"/>
               	        <classpath refid="unit.test.path"/>
