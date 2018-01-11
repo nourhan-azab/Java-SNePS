@@ -8,11 +8,6 @@
     <pathelement location="lib/junit.jar"/>
     <pathelement location="lib/hamcrest.jar"/>
     <pathelement location="${main.build.dir}"/>
-  	
-    <fileset dir="lib/">
-        <include name="**/*.jar"/>
-    </fileset>
-  	             
   </path>
 
   <target name="compile">
@@ -31,6 +26,9 @@
     <junit printsummary="on" haltonfailure="yes" fork="true">
         <classpath>
           <path refid="classpath.test"/>
+        	 <fileset dir="lib/">
+        	        <include name="**/*.jar"/>
+        	    </fileset>
           <pathelement location="${test.build.dir}"/>
         </classpath>
         <formatter type="brief" usefile="false" />
