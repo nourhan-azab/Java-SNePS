@@ -83,6 +83,8 @@
       	    	
       	    	 <classpath>
       	    	  	<pathelement location="build/classes/"/>
+      	    	 	<pathelement location="lib/junit.jar"/>
+      	    	 	<pathelement location="lib/hamcrest.jar"/>
       	    	 </classpath>
 
       	    	<formatter type="brief" usefile="false" />
