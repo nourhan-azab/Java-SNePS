@@ -13,6 +13,9 @@
   <target name="compile">
     <mkdir dir="${main.build.dir}"/>
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false"/>
+  	<fileset dir="lib/">
+  	      <include name="**/*.jar"/>
+  	 </fileset>
   </target>
 
   <target name="test-compile" depends="compile">
