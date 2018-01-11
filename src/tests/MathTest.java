@@ -1,4 +1,5 @@
 package tests;
+
 import junit.framework.TestCase;
 import matching.Calculation;
 public class MathTest extends TestCase {

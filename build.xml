@@ -17,6 +17,7 @@
               	  </path>
 
               	  <target name="compile">
+              	  <path refid="classpath.test"/>
               	    <mkdir dir="${main.build.dir}"/>
               	    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false"/>
               	  </target>
