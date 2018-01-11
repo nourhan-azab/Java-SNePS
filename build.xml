@@ -71,7 +71,7 @@
  
           <target name="compile">
             <mkdir dir="build/classes"/>
-            <javac srcdir="src" destdir="build/classes"/>
+            <javac srcdir="${src.path}" destdir="build/classes"/>
       	</target>
               	
 
